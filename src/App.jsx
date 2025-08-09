@@ -1,9 +1,15 @@
+import React from "react";
 import Hero from "./Components/hero";
 
-export default function App() {
+function App() {
   return (
-    <div className="w-screen h-screen bg-black">
+    <>
       <Hero />
-    </div>
-  )
+      <div style={{ position: "relative", zIndex: 10, color: "#fff" }}>
+      
+      </div>
+    </>
+  );
 }
+
+export default App;
