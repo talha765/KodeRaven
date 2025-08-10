@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../assets/logo.svg';
+import Button from './Button';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('Home');
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navLinks = [
     { name: 'Home', href: '#home' },
@@ -13,24 +15,30 @@ const Navbar = () => {
     { name: 'FAQ', href: '#faq' }
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleLinkClick = (linkName) => {
     setActiveLink(linkName);
     setIsMenuOpen(false);
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50">
-      {/* Glassy bar background */}
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.10),rgba(255,255,255,0.04)_40%,rgba(0,0,0,0))]" />
-      <div className="backdrop-blur-xl bg-white/5 border-b border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)]">
-        {/* Edge-to-edge content (no side padding) */}
-        <div className="w-full">
-          <div className="h-[84px] flex items-center justify-between md:grid md:grid-cols-3">
-            {/* Logo */}
-            <div className="flex items-center md:justify-self-start">
-              <div className="flex items-center space-x-3 pl-3 py-1.5">
-                <img src={logo} alt="KodeRaven Logo" className="h-[50px] md:h-[58px] w-auto select-none" />
-              </div>
+
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex items-center">
+            <div className="flex items-center space-x-3">
+                <img src={logo} alt="KodeRaven Logo" className="w-23 h-23" />
             </div>
 
             {/* Desktop Navigation */}
@@ -53,6 +61,13 @@ const Navbar = () => {
                   />
                 </a>
               ))}
+              <div className="px-3 py-2">
+                <button
+                  className="w-full bg-gray-100 text-gray-900 px-6 py-2 rounded-lg hover:bg-gray-200 transition-colors duration-200 font-medium font-blauer"
+                >
+                  Get Started
+                </button>
+
             </div>
 
             {/* Get Started Button */}
@@ -86,29 +101,27 @@ const Navbar = () => {
           {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="md:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1 bg-black/50 backdrop-blur-xl border-t border-white/10">
+              <div className="px-4 pt-4 pb-6 space-y-3 bg-black/50 backdrop-blur-xl border-t border-white/10">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
                     href={link.href}
                     onClick={() => handleLinkClick(link.name)}
-                    className={`group block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
+                    className={`group block px-4 py-3 rounded-md text-base font-medium transition-all duration-300 ${
                       activeLink === link.name
                         ? 'text-purple-300 bg-white/10'
                         : 'text-white/90 hover:text-white hover:bg-white/5'
                     }`}
                   >
                     {link.name}
-                    <span className={`mt-1 block h-[2px] w-0 bg-gradient-to-r from-fuchsia-400 via-purple-400 to-indigo-400 transition-all duration-500 group-hover:w-full ${activeLink === link.name ? 'w-full' : ''}`} />
+                    <span className={`mt-2 block h-[2px] w-0 bg-gradient-to-r from-fuchsia-400 via-purple-400 to-indigo-400 transition-all duration-500 group-hover:w-full ${activeLink === link.name ? 'w-full' : ''}`} />
                   </a>
                 ))}
-                <div className="px-3 py-2">
-                  <button
-                    className="w-full rounded-xl border border-white/15 bg-white/10 px-5 py-2 text-sm font-medium text-white/90 backdrop-blur-md transition-all duration-300 ease-[cubic-bezier(.2,.8,.2,1)] hover:-translate-y-0.5 hover:text-white hover:shadow-[0_10px_30px_rgba(147,51,234,0.35)]"
-                  >
-                    Get Started
-                  </button>
+                <div className="px-4 py-3">
+                  <Button className="w-full">Get Started</Button>
                 </div>
+              </div>
+
               </div>
             </div>
           )}
