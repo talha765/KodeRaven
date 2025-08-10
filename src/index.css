@@ -4,18 +4,128 @@
 
 @font-face {
   font-family: 'Blauer Nue';
-  src: url('KodeRaven\public\fonts\blauer-nue-font-family\Blauer-Nue-Regular-iF6626350c83fdf.otf') format('opentype'),
-       url('KodeRaven\public\fonts\blauer-nue-font-family\Blauer-Nue-Regular-iF6626350c83fdf.otf') format('opentype');
+  src: url('/fonts/BlauerNue-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-Thin_Italic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-ExtraLight_Italic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-Light_Italic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Blauer Nue';
-  src: url('KodeRaven\public\fonts\blauer-nue-font-family\Blauer-Nue-Regular-iF6626350c83fdf.otf') format('opentype'),
-       url('KodeRaven\public\fonts\blauer-nue-font-family\Blauer-Nue-Regular-iF6626350c83fdf.otf') format('opentype');
+  src: url('/fonts/BlauerNue-Regular_Italic.woff2') format('woff2');
   font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-Medium.woff2') format('woff2');
+  font-weight: 500;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-Medium_Italic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-SemiBold_Italic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-Bold_Italic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-ExtraBold_Italic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-Heavy.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('/fonts/BlauerNue-Heavy_Italic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
 }
 
 :root {
