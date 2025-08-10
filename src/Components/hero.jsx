@@ -1,13 +1,12 @@
 import React from "react";
 import ShaderGradientComponent from "./ShaderGradient";
 import NoiseBackgroundDemo from "./NoiseBackgroundDemo";
+import GlassAboutButton from "./GlassAboutButton";
 const Hero = () => {
   return (
-<<<<<<< Updated upstream
+
     <div className="relative w-screen h-screen flex flex-col justify-center items-center text-white overflow-hidden bg-[#000000] pt-16">
-=======
-    <div className="relative w-screen min-h-screen flex flex-col items-center text-white overflow-visible bg-[#000000] pt-24">
->>>>>>> Stashed changes
+
     
       <div className="absolute inset-0 z-0 overflow-visible">
         <ShaderGradientComponent />
@@ -83,6 +82,7 @@ const Hero = () => {
       
       {/* Placeholder cat image for scroll testing */}
   
+
     </div>
   );
 };
