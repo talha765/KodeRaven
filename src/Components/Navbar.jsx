@@ -25,22 +25,22 @@ const Navbar = () => {
       <div className="backdrop-blur-xl bg-white/5 border-b border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)]">
         {/* Edge-to-edge content (no side padding) */}
         <div className="w-full">
-          <div className="h-20 flex items-center justify-between md:grid md:grid-cols-3">
+          <div className="h-[84px] flex items-center justify-between md:grid md:grid-cols-3">
             {/* Logo */}
             <div className="flex items-center md:justify-self-start">
               <div className="flex items-center space-x-3 pl-3 py-1.5">
-                <img src={logo} alt="KodeRaven Logo" className="h-14 md:h-16 w-auto select-none" />
+                <img src={logo} alt="KodeRaven Logo" className="h-[50px] md:h-[58px] w-auto select-none" />
               </div>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-6 md:justify-self-center">
+            <div className="hidden md:flex items-center md:gap-5 lg:gap-7 xl:gap-8 md:justify-self-center flex-nowrap whitespace-nowrap overflow-x-auto md:text-sm lg:text-base">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={() => handleLinkClick(link.name)}
-                  className={`group relative inline-block px-2 py-1 text-white/90 transition-all duration-400 ease-[cubic-bezier(.2,.8,.2,1)] hover:-translate-y-0.5 hover:text-white ${
+                  className={`group relative inline-block px-2 py-1 text-white/90 whitespace-nowrap transition-all duration-400 ease-[cubic-bezier(.2,.8,.2,1)] hover:-translate-y-0.5 hover:text-white ${
                     activeLink === link.name ? 'text-white' : ''
                   }`}
                 >
