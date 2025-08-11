@@ -53,7 +53,7 @@ const Hero = () => {
         {/* Buttons Container */}
         <div className="mt-8 flex justify-start gap-4 items-center">
           <div className="h-12 flex items-center">
-            <Button>Book a Consultation</Button>
+            <Button>Book a Free Consultation</Button>
           </div>
           <div className="h-12 flex items-center">
             <AboutUsButton 
@@ -64,47 +64,6 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Placeholder sections for scroll gradient testing */}
-      <div className="relative z-10 w-full max-w-4xl px-4 space-y-32 mt-32">
-        {/* Section 1 */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-          <h2 className="text-3xl font-bold text-white mb-4">Section 1</h2>
-          <p className="text-white/80 text-lg leading-relaxed">
-            This is a placeholder section to test how the ShaderGradient flows as you scroll. 
-            The gradient should continue flowing down the page without being cut off.
-          </p>
-        </div>
-
-        {/* Section 2 */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-          <h2 className="text-3xl font-bold text-white mb-4">Section 2</h2>
-          <p className="text-white/80 text-lg leading-relaxed">
-            Keep scrolling to see the gradient animation continue. The overflow-visible property 
-            should allow the ShaderGradient to extend beyond the hero section.
-          </p>
-        </div>
-
-        {/* Section 3 */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-          <h2 className="text-3xl font-bold text-white mb-4">Section 3</h2>
-          <p className="text-white/80 text-lg leading-relaxed">
-            Notice how the gradient background flows seamlessly through all sections. 
-            This creates a beautiful continuous visual experience as you scroll.
-          </p>
-        </div>
-
-        {/* Section 4 */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-32">
-          <h2 className="text-3xl font-bold text-white mb-4">Section 4</h2>
-          <p className="text-white/80 text-lg leading-relaxed">
-            The ShaderGradient should now be visible throughout the entire scroll experience, 
-            creating a cohesive and immersive background effect.
-          </p>
-        </div>
-      </div>
-      
-      {/* Placeholder cat image for scroll testing */}
-  
     </div>
   );
 };
