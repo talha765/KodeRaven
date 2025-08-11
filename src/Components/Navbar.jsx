@@ -76,6 +76,7 @@ const Navbar = () => {
             {/* Get Started Button */}
             <div className="hidden md:flex md:justify-self-end pr-3 items-center relative z-10">
               <Button>Get Started</Button>
+
             </div>
 
             {/* Mobile menu button */}
@@ -118,6 +119,7 @@ const Navbar = () => {
                 <div className="px-4 py-3">
                   <Button className="w-full">Get Started</Button>
                 </div>
+              </div>
               </div>
             </div>
           )}
