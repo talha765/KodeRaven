@@ -9,7 +9,7 @@ const Button = ({
   disabled = false,
   type = "button"
 }) => {
-  const baseClasses = "relative overflow-hidden rounded-md border border-gray-200 bg-white text-sm font-medium transition-all duration-300 ease-[cubic-bezier(.2,.8,.2,1)] hover:-translate-y-0.5 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 group";
+  const baseClasses = "relative overflow-hidden rounded-md border border-gray-200 bg-white text-lg font-semibold transition-all duration-300 ease-[cubic-bezier(.2,.8,.2,1)] hover:-translate-y-0.5 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 group";
   
   const variantClasses = {
     primary: "text-gray-900 hover:text-black hover:shadow-[0_0_0_2px_rgba(147,51,234,0.3),0_0_20px_rgba(147,51,234,0.2)]",
@@ -19,7 +19,7 @@ const Button = ({
   
   const sizeClasses = {
     sm: "px-3 py-1.5 text-xs",
-    md: "px-5 py-2 text-sm",
+    md: "px-6 py-2.5 text-sm",
     lg: "px-6 py-3 text-base"
   };
 
